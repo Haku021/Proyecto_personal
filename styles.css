@@ -1,10 +1,10 @@
 @font-face {
     font-family: "Gloria2";
-    src: url(fuentes/Gloria.ttf) format("truetype");
+    src: url(recurs/Gloria.ttf) format("truetype");
 }
 @font-face {
     font-family: "Gochi";
-    src: url(fuentes/GochiHand-Regular.ttf) format("truetype");
+    src: url(recurs/GochiHand-Regular.ttf) format("truetype");
 }
 #menu{
     font-size: 70px;
@@ -20,7 +20,7 @@
     text-shadow: rgb(145, 62, 104) 4px 3px 4px, rgb(76, 12, 48) 3px 0 25px;
     padding: 10px;
     margin: 0;
-    background-image: url(imagenes/encabezado.jpg);
+    background-image: url(recurs/encabezado.jpg);
     height: 370px;
 }
 body{
