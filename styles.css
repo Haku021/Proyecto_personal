@@ -7,9 +7,12 @@
     src: url(recurs/GochiHand-Regular.ttf) format("truetype");
 }
 #menu{
-    font-size: 70px;
+    font-size: 30px;
     font-family: "Gochi", sans-serif;
-    background-color: rgb(203, 237, 249);
+    background-color: rgb(242, 210, 244);
+}
+#contacto{
+    background-color: rgb(161, 153, 217);
 }
 .encabezado{
     margin: 0;
@@ -40,6 +43,7 @@ p{
     text-align:unset;
     font-size: 20px;
     font-family: "Gloria2", sans-serif;
+    margin-top: 0px;
 }
 h2, h3{
     font-family: "Gochi", sans-serif;
@@ -50,10 +54,15 @@ aside{
 }
 .centrado{
     text-align: center;
-}
-address{
-    float: left;
+    justify-content: center
+
 }
 a:link{
     color:rgb(145, 62, 104);
+}
+a:visited{
+    color:rgb(118, 61, 69);
+}
+a:hover{
+    color:rgb(94, 167, 149);
 }
