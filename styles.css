@@ -49,8 +49,9 @@ h2, h3{
     font-family: "Gochi", sans-serif;
 }
 aside{
-    float: right;
-     width: 20%;
+    float:right;
+    margin: 20px;
+    width: 30%;
 }
 .centrado{
     text-align: center;
