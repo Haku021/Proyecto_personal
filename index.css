@@ -7,20 +7,22 @@
     src: url(recurs/GochiHand-Regular.ttf) format("truetype");
 }
 body{
-    margin-left: 20px;
-    background-color: beige;
+    margin-left:20px;
     margin-right: 20px;
+    background-color: beige;
     font-family: "Gochi", sans-serif;
     font-size: 30px ;
+    padding: 10px;
 }
 main{
     margin-top: 35px;
     background-color: rgb(203, 237, 249);
     border-radius: 5px;
-    box-shadow: gray 2px;
-    margin-left: 20px;
-    margin-right: 20px;
+    box-shadow: gray 0px 0px 2px;
+    margin-left: 2px;
+    margin-right: 2px;
     font-size: 30px;
+    padding: 20px;
 }
 p{
     text-align:unset;

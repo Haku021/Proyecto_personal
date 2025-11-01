@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Gloria2";
+    src: url(recurs/Gloria.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Gochi";
+    src: url(recurs/GochiHand-Regular.ttf) format("truetype");
+}
+body{
+    margin-left: 20px;
+    background-color: beige;
+    margin-right: 20px;
+    font-family: "Gochi", sans-serif;
+    font-size: 30px ;
+}
+main{
+    margin-top: 35px;
+    background-color: rgb(134, 171, 185);
+    border-radius: 5px;
+    box-shadow: gray 0px 0px 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+p{
+    text-align:unset;
+    font-size: 20px;
+    font-family: "Gloria2", sans-serif;
+    margin-top: 0px;
+}
+.encabezado{
+    margin: 0;
+    text-align: center;
+    color:wheat;
+    font-size: 50px;
+    text-shadow: rgb(145, 62, 104) 4px 3px 4px, rgb(76, 12, 48) 3px 0 25px;
+    padding: 10px;
+    margin: 0;
+    background-image: url(recurs/encabezado.jpg);
+    height: 370px;
+}
+nav{
+    background-color: #E8B4E8;
+    padding: 5px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+a{
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+a:link{
+    color:rgb(39, 49, 95);
+}
+a:visited{
+    color:rgb(57, 23, 54);
+}
+a:hover{
+    background-color: rgb(134, 102, 143);
+    color:rgb(211, 225, 221);
+}
+
+.revistas{
+    padding: 20px;
+}
