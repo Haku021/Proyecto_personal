@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "Gloria2";
+    src: url(recurs/Gloria.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Gochi";
+    src: url(recurs/GochiHand-Regular.ttf) format("truetype");
+}
+
+body{
+    margin: 20px;
+    background-color: #FFF6E5;
+    font-family: "Gochi", sans-serif;
+    font-size: 28px;
+    padding: 10px;
+}
+
+p{
+    font-size: 20px;
+    font-family: "Gloria2", sans-serif;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+.gridEncab{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.encabezado{
+    text-align: center;
+    color: #f6b2f6;
+    font-size: 25px;
+    text-shadow: 
+        4px 4px 0 #272525,
+        6px 6px 0 #41256d;
+    padding: 20px;
+    background-image: url(recurs/encabezado.png);
+    background-size: cover;
+    background-position: center;
+    border: 5px solid #262424;
+    border-radius: 20px;
+    margin-top: -30px;
+    margin-bottom: -20px;
+    margin-left: -60px;
+    width: 80%;
+    height: 85%;
+    box-shadow: 6px 6px 0 #2d2b2b;
+}
+
+.encabezado h1{
+    margin-top: 600px;
+}
+
+.encabezado p{
+    font-size: 25px;
+    margin-top: -20px;
+    margin-bottom: 70px;
+    color: #fcdd46;
+    text-shadow: 4px 0 0 #585252;
+}
+
+#encabezado{
+    margin-top: 10px;
+}
+
+nav{
+    display: flex;
+    background-color: #ffbc5f;
+    padding: 10px;
+    border: 4px solid #363434;
+    border-radius: 12px;
+    box-shadow: 6px 6px 0 #3e3c3c;
+    margin-top: -30px;
+    margin-left: -40px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+a{
+    text-decoration: none;
+    padding: 12px 22px;
+    font-size: 24px;
+    border: 3px solid #2d2c2c;
+    border-radius: 12px;
+    background-color: #66cdc3;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a:link,
+a:visited{
+    color: #232222;
+}
+
+a:hover{
+    transform: rotate(-3deg) scale(1.05);
+    box-shadow: 4px 4px 0 #323232;
+    background-color: #f35365;
+    color: #FFF;
+}
+main{
+    margin-top: 50px;
+}
+#formulario-suscripcion {
+    background: linear-gradient(135deg, #E8B4D9, #D4A5C7);
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#formulario-suscripcion h3 {
+    color: #000;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subtitulo-suscripcion {
+    text-align: center;
+    color: #000;
+    font-size: 1em;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+#form-suscripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-suscripcion label {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.1em;
+}
+
+#form-suscripcion input[type="text"],
+#form-suscripcion input[type="email"],
+#form-suscripcion input[type="password"],
+#form-suscripcion input[type="date"],
+#form-suscripcion select {
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    font-size: 0.95em;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#form-suscripcion button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    margin-top: 10px;
+}
+
+#form-suscripcion button[type="submit"]:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.mensaje-login {
+    text-align: center;
+    margin-top: 15px;
+    color: #000;
+    font-size: 0.95em;
+}
+
+.mensaje-login a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.mensaje-login a:hover {
+    color: #333;
+}
+
+#mensaje-respuesta {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+#mensaje-respuesta.exito {
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+    color: #155724;
+    display: block;
+}
+
+#mensaje-respuesta.error {
+    background-color: #f8d7da;
+    border: 2px solid #dc3545;
+    color: #721c24;
+    display: block;
+}

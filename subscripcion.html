@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>People on Wheels</title>
+    <link rel="stylesheet" href="subscripcion.css">
 </head>
 <body>
+    <header class="gridEncab">
+        <div class="encabezado">
+            <h1 id="encabezado"> <strong>People on  Wheels</strong></h1>
+            <p><strong>Mundo Skateboard</strong></p>
+        </div>
+    <nav> 
+        <ul >
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="revistas.html">Revistas</a></li>
+            <li><a href="skaters.html">Skaters</a></li>
+            <li><a href="comprar.html">Tienda</a></li>
+            <li><a href="subscripcion.html">Suscribete</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <section id="formulario-suscripcion">
+            <h3>Suscríbete a nuestra comunidad</h3>
+            <p class="subtitulo-suscripcion">Únete para acceder a la tienda y contenido exclusivo</p>
+    
+            <form id="form-suscripcion">
+                <label for="nombre-suscripcion">Nombre completo:</label>
+                <input type="text" id="nombre-suscripcion" name="nombre" required>
+        
+                <label for="email-suscripcion">Email:</label>
+                <input type="email" id="email-suscripcion" name="email" required>
+        
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username" required>
+        
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required minlength="6">
+        
+                <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha_nacimiento" required>
+        
+                <label for="nivel-skate">Nivel de skate:</label>
+                <select id="nivel-skate" name="nivel_skate" required>
+                <option value="">Selecciona tu nivel</option>
+                <option value="Principiante">Principiante</option>
+                <option value="Intermedio">Intermedio</option>
+                <option value="Avanzado">Avanzado</option>
+                <option value="Profesional">Profesional</option>
+                </select>
+        
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+        
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required>
+        
+            <label class="checkbox-label">
+                <input type="checkbox" id="terminos" name="terminos" required>
+            Acepto los términos y condiciones
+            </label>
+        
+            <button type="submit">Suscribirme</button>
+        
+        <p class="mensaje-login">¿Ya tienes cuenta? <a href="#login">Inicia sesión aquí</a></p>
+    </form>
+    
+    <div id="mensaje-respuesta"></div>
+</section>
+
+    </main>
     
 </body>
 </html>
