@@ -15,44 +15,33 @@ body{
     padding: 10px;
 }
 
-/*main{
-    margin-top: 35px;
-    background-color: #CBEDF9;
-    border: 4px solid #000;
-    border-radius: 16px;
-    box-shadow: 8px 8px 0px #000;
-    font-size: 28px;
-    padding: 25px;
-}*/
-
 p{
     font-size: 20px;
     font-family: "Gloria2", sans-serif;
     margin-top: 0;
     line-height: 1.5;
 }
+
 .gridEncab{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
 }
+
 .encabezado{
     text-align: center;
-    color: #e787e2;
+    color: #f6b2f6;
     font-size: 25px;
     text-shadow: 
         4px 4px 0 #272525,
-        6px 6px 0 #b295e1;
+        6px 6px 0 #41256d;
     padding: 20px;
     background-image: url(recurs/encabezado.png);
     background-size: cover;
     background-position: center;
-    height: 370px;
     border: 5px solid #262424;
     border-radius: 20px;
-    
-    background-size: 400px auto;
     margin-top: -30px;
     margin-bottom: -20px;
     margin-left: -60px;
@@ -60,14 +49,20 @@ p{
     height: 85%;
     box-shadow: 6px 6px 0 #2d2b2b;
 }
+
 .encabezado h1{
     margin-top: 600px;
 }
+
 .encabezado p{
-    margin-top: -30px;
+    font-size: 25px;
+    margin-top: -20px;
     margin-bottom: 70px;
+    color: #fcdd46;
+    text-shadow: 4px 0 0 #585252;
 }
-#encabezado {
+
+#encabezado{
     margin-top: 10px;
 }
 
@@ -110,6 +105,13 @@ a:hover{
     background-color: #f35365;
     color: #FFF;
 }
+
+.seccion-info{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
 .conocenos{
     background-color: #CBEDF9;
     border: 4px solid #333232;
@@ -117,58 +119,110 @@ a:hover{
     box-shadow: 8px 8px 0px #2d3059;
     margin-top: 30px;
     margin-bottom: 20px;
-    padding: 5px  50px;
-    margin-right: 820px;
+    padding: 5px 50px;
+    margin-right: 0;
+    width: 50%;
 }
+
 .conocenos h2{
     font-size: 30px;
     margin-bottom: -3px;
     color: #202950;
 }
+
 .conocenos p{
     margin-top: 10px;
     color: #3d3d3d;
 }
+
 .conocenos img{
     float: right;
     margin-right: 10px;
     margin-left: 20px;
-    width: 180px;
+    width: 200px;
     height: auto;
-    border: 4px solid #2d2c2c;
-    border-radius: 16px;
-    box-shadow: 6px 6px 0 #3a3a3a;
+    border-radius: 4px;
 }
+
 .historia{
+    display: block;
     background-color: #F9D5E5;
     border: 4px solid #343333;
     border-radius: 16px;
     box-shadow: 8px 8px 0px #2e2d2d;
-    padding: 5px  50px;
+    padding: 5px 50px;
+    width: 50%;
+}
+.historia img{
+    width: 450px;
+    height: auto;
+    border-radius: 4px;
+    margin-left: 110px;
+}
+.historia h2{
+    font-size: 30px;
+    margin-bottom:10px;
+    color: #702749;
+}
+.historia p{
+    margin-top: 10px;
+    color: #391f39;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .contenedor{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 35px;
+    margin-right: 30px;
+    margin-left: -30px;
 }
+
 .item{
-    background-color: #E8B4E8;
-    padding: 20px;
+    background-color: #F9D5E5;
+    padding: 30px;
     border-radius: 16px;
     border: 4px solid #2d2c2c;
     box-shadow: 6px 6px 0 #3a3a3a;
     transition: transform 0.2s;
+    height: 480px;
+    width: 80%;
+    color: #817272;
 }
+.item strong{
+    font-size: 30px;
+    color: #623d59;
+    margin-bottom: 10px;
+}
+.item img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
 .item:hover{
     transform: translateY(-5px) rotate(1deg);
 }
 
 #contacto{
-    background-color: #9D8DF1;
+    background-color: #bcb2ef;
     border: 4px solid #2b2a2a;
     border-radius: 16px;
     box-shadow: 6px 6px 0 #2d2d2d;
+    padding:0 20px;
+}
+#contacto h2{
+    font-size: 30px;
+    margin-top: 10px;
+    color: #6558a8;
+}
+#contacto p{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 aside{
@@ -183,4 +237,16 @@ footer{
     text-align: center;
     font-size: 20px;
     margin-top: 30px;
+    color: #532b75;
+}
+
+@media (max-width: 900px){
+    .seccion-info{
+        flex-direction: column;
+    }
+
+    .conocenos,
+    .historia{
+        width: 100%;
+    }
 }

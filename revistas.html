@@ -7,57 +7,89 @@
     <link rel="stylesheet" href="revistas.css">
 </head>
 <body>
-     <header>
+    <header class="gridEncab">
         <div class="encabezado">
-            <h1 id="encabezado"> <strong>-> People on  Wheels <- </strong></h1>
-            <em>Mundo Skateboard</em>
+            <h1 id="encabezado"> <strong>People on  Wheels</strong></h1>
+            <p><strong>Mundo Skateboard</strong></p>
         </div>
     <nav> 
         <ul >
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="revistas.html">Revistas famosas</a></li>
-            <li><a href="skaters.html">Skaters icónicos</a></li>
-            <li><a href="comprar.html">Compra tu primer skate!</a></li>
+            <li><a href="revistas.html">Revistas</a></li>
+            <li><a href="skaters.html">Skaters</a></li>
+            <li><a href="comprar.html">Tienda</a></li>
             <li><a href="subscripcion.html">Suscribete</a></li>
         </ul>
     </nav>
-    </header>   
+    </header>
     <main>
         <section id="Revistas">
-            <h3 >Revistas iconicas:</h3>
-            <li><a href="https://www-thrashermagazine-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc">Trasher Magazine</a></li>
-            <img src="recurs/trasher.jpg" alt="portadaTrasher">
-            <li><a href="https://www.skateboarding.com/">Transworld </a></li>
-            <img src="recurs/transworld.jpg" alt="portadaTransworld">    
+            <h3>Revistas iconicas:</h3>
+            <div class="revistas-grid">
+                <div class="revista-card">
+                    <a href="https://www-thrashermagazine-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc">
+                    <img src="recurs/trasher.jpg" alt="portadaTrasher">
+                    <p>Thrasher Magazine</p>
+                    </a>
+                </div>
+                <div class="revista-card">
+                    <a href="https://www.skateboarding.com/">
+                    <img src="recurs/transworld.jpg" alt="portadaTransworld">
+                    <p>Transworld</p>
+                    </a>
+                </div>
+                <div class="revista-card">
+                    <a href="">
+                    <img src="recurs/bigbro.jpg" alt="portadaBigBrother">
+                    <p>Big Brother</p>
+                    </a>
+                </div>
+                <div class="revista-card">
+                    <a href="https://skateboardermag.com/">
+                    <img src="recurs/skateboardMag.jpg" alt="portadaSkateboarder">
+                    <p>Skateboarder Magazine</p>
+                </a>
+                </div>
+                <div class="revista-card">
+                    <a href="https://www.slapmagazine.com/">
+                    <img src="recurs/slap.jpg" alt="slapmagazine">
+                    <p>Slap Magazine</p>
+                    </a>
+                </div>
+            </div>
         </section>
-        <br><br>
-        <section id="puntuacion" class="letra" >
-        
-            <!--Formulario de calificacion-->
-            <h3>Calificanos:</h3>
-            <form action="#" method="post"></form>
-            <fieldset>
-            
-                <legend><strong>Registrar su calificación</strong></legend>
-                <br>
-                <label for="usuario">Nombre de usuario:</label>
-                <input type="text" id="usuario" name="usuario" required>
+  <section id="formulario-preferencias">
+            <h3>¿Cuál revista te interesó más?</h3>
+            <form action="http://localhost:5000/guardar" method="POST">
+                <label for="nombre">Tu nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
                 <br><br>
-                <label for="calificacion">Calificación:</label>
-                <select id="calificacion" name="calificacion" required>
-                    <option value="5">5 - Excelente</option>
-                    <option value="4">4 - Bueno</option>
-                    <option value="3">3 - Regular</option>
-                    <option value="2">2 - Malo</option>
-                    <option value="1">1 - Muy malo</option>              
+                
+                <label for="email">Email (opcional):</label>
+                <input type="email" id="email" name="email">
+                <br><br>
+                
+                <label for="revista">Revista favorita:</label>
+                <select id="revista" name="revista" required>
+                    <option value="">Selecciona una revista</option>
+                    <option value="Thrasher Magazine">Thrasher Magazine</option>
+                    <option value="Transworld">Transworld</option>
+                    <option value="Big Brother">Big Brother</option>
+                    <option value="Skateboarder Magazine">Skateboarder Magazine</option>
+                    <option value="Slap Magazine">Slap Magazine</option>
                 </select>
                 <br><br>
-                <label for="porque">Motivo de su calificacion:</label>
-                <input type="text" id="porque" name="porque" required>
+                
+                <label for="comentario">¿Por qué te gustó?</label>
+                <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
                 <br><br>
-                <button type="submit">Registrar calificación</button>
-            </fieldset>
+                
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
+    <footer>
+        <p><strong>&copy; 2025 Mundo Skateboard</strong></p>
+    </footer>
 </body>
 </html>
