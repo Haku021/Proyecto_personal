@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People on Wheels</title>
+    <link rel="stylesheet" href="comprar.css">
 </head>
 <body>
     <header class="gridEncab">
@@ -21,52 +22,207 @@
         </ul>
     </nav>
     </header>
-    <section id="Marcas">
-    <h2 >Marcas de Skate:</h2>
-    <table border="1">
-        <tr>
-            <th>Marcas de skate</th>
-            <th>Origen</th>
-            <th>Año de fundación</th>
-        </tr>
-        <tr>
-            <td>Element</td>
-            <td>Estados Unidos</td>
-            <td>1992</td>
-        </tr>
-        <tr>
-            <td>Santa Cruz</td>
-            <td>Estados Unidos</td>
-            <td>1973</td>
-        </tr>
-        <tr>
-            <td>Plan B</td>
-            <td>Estados Unidos</td>
-            <td>1991</td>
-        </tr>
-    </table>
-    <br>
-    </section>
-
-    <section id="Tipos">
-    <h3>Tipos de skate:</h3>
-    <ul>
-        <li><strong>Longboard:</strong></li>
-        <p>Más largo, ideal para velocidad, downhill y cruising.</p>
-        <img src="recurs/long.jpg" width="200">
-        <li><strong>Cruise:</strong></li>
-        <p>Más compacto que el longboard, cómodo para desplazarse por la ciudad.</p>
-        <img src="recurs/cruiser.jpg" width="200">
-        <li><strong>Skateboard clasico:</strong></li>
-        <p>Usado para trucos en calles y parques (street y park).</p>
-        <img src="recurs/skate.jpg" width="200">
-        <li><strong>Old School:</strong></li>
-        <p>Diseño retro, usado en rampas o bowl skating.</p>
-        <img src="recurs/old.jpg" width="200">
-    </ul>
-    </section>
-    <br>
-    <br>
+    <main>
+        <section id="tienda">
+    <h3>Tienda de Skate</h3>
+    <p class="subtitulo-tienda">Encuentra todo lo que necesitas para patinar</p>
+  
+    <div id="verificacion-suscripcion" style="display: none;">
+        <div class="mensaje-no-suscrito">
+            <h4>Debes estar suscrito para comprar</h4>
+            <p>Únete a nuestra comunidad para acceder a la tienda</p>
+            <a href="#formulario-suscripcion" class="btn-suscribirse">Suscribirme ahora</a>
+        </div>
+    </div>
     
+    <div id="contenido-tienda">
+        <div class="filtros-tienda">
+            <label for="categoria-filtro">Categoría:</label>
+            <select id="categoria-filtro">
+                <option value="todos">Todos los productos</option>
+                <option value="tablas">Tablas</option>
+                <option value="ruedas">Ruedas</option>
+                <option value="trucks">Trucks</option>
+                <option value="ropa">Ropa</option>
+                <option value="accesorios">Accesorios</option>
+            </select>
+            
+            <label for="precio-filtro">Ordenar por precio:</label>
+            <select id="precio-filtro">
+                <option value="default">Seleccionar</option>
+                <option value="menor">Menor a Mayor</option>
+                <option value="mayor">Mayor a Menor</option>
+            </select>
+        </div>
+   
+        <div class="productos-grid">
+            <!-- Producto 1: Tabla -->
+            <div class="producto-card" data-categoria="tablas" data-precio="130">
+                <div class="producto-imagen">
+                    <img src="recurs/tabla2.jpg" alt="Tabla de skate">
+                </div>
+                <div class="producto-info">
+                    <h4 class="producto-nombre">Tabla Street Pro</h4>
+                    <p class="producto-descripcion">Tabla profesional para street skating</p>
+                    <p class="producto-precio">S/.<span class="precio-valor">130</span></p>
+                    <div class="producto-acciones">
+                        <label for="cantidad-1">Cantidad:</label>
+                        <div class="cantidad-container">
+                            <button class="btn-cantidad btn-decrementar" data-target="cantidad-1">−</button>
+                            <input type="number" id="cantidad-1" class="cantidad-input" value="1" min="1" max="10" readonly>
+                            <button class="btn-cantidad btn-incrementar" data-target="cantidad-1">+</button>
+                        </div>
+                        <button class="btn-agregar-carrito" data-id="1">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2: Cruiser -->
+            <div class="producto-card" data-categoria="tablas" data-precio="230">
+                <div class="producto-imagen">
+                    <img src="recurs/cruiser.jpg" alt="Cruiser">
+                </div>
+                <div class="producto-info">
+                    <h4 class="producto-nombre">Cruiser Retro</h4>
+                    <p class="producto-descripcion">Cruiser cómoda para desplazarte</p>
+                    <p class="producto-precio">S/.<span class="precio-valor">230</span></p>
+                    <div class="producto-acciones">
+                        <label for="cantidad-2">Cantidad:</label>
+                        <div class="cantidad-container">
+                            <button class="btn-cantidad btn-decrementar" data-target="cantidad-2">−</button>
+                            <input type="number" id="cantidad-2" class="cantidad-input" value="1" min="1" max="10" readonly>
+                            <button class="btn-cantidad btn-incrementar" data-target="cantidad-2">+</button>
+                        </div>
+                        <button class="btn-agregar-carrito" data-id="2">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3: Ruedas -->
+            <div class="producto-card" data-categoria="ruedas" data-precio="85">
+                <div class="producto-imagen">
+                    <img src="recurs/ruedas.jpg" alt="Ruedas Spitfire">
+                </div>
+                <div class="producto-info">
+                    <h4 class="producto-nombre">Ruedas Spitfire</h4>
+                    <p class="producto-descripcion">Set de 4 ruedas profesionales</p>
+                    <p class="producto-precio">S/.<span class="precio-valor">85</span></p>
+                    <div class="producto-acciones">
+                        <label for="cantidad-3">Cantidad:</label>
+                        <div class="cantidad-container">
+                            <button class="btn-cantidad btn-decrementar" data-target="cantidad-3">−</button>
+                            <input type="number" id="cantidad-3" class="cantidad-input" value="1" min="1" max="10" readonly>
+                            <button class="btn-cantidad btn-incrementar" data-target="cantidad-3">+</button>
+                        </div>
+                        <button class="btn-agregar-carrito" data-id="3">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4: Trucks -->
+            <div class="producto-card" data-categoria="trucks" data-precio="95">
+                <div class="producto-imagen">
+                    <img src="recurs/truck2.jpg" alt="Trucks Independent">
+                </div>
+                <div class="producto-info">
+                    <h4 class="producto-nombre">Trucks Independent</h4>
+                    <p class="producto-descripcion">Par de trucks de alta calidad</p>
+                    <p class="producto-precio">S/.<span class="precio-valor">95</span></p>
+                    <div class="producto-acciones">
+                        <label for="cantidad-4">Cantidad:</label>
+                        <div class="cantidad-container">
+                            <button class="btn-cantidad btn-decrementar" data-target="cantidad-4">−</button>
+                            <input type="number" id="cantidad-4" class="cantidad-input" value="1" min="1" max="10" readonly>
+                            <button class="btn-cantidad btn-incrementar" data-target="cantidad-4">+</button>
+                        </div>
+                        <button class="btn-agregar-carrito" data-id="4">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 5: Ropa -->
+            <div class="producto-card" data-categoria="ropa" data-precio="175">
+                <div class="producto-imagen">
+                    <img src="recurs/ropa.jpg" alt="Pack ropa skater">
+                </div>
+                <div class="producto-info">
+                    <h4 class="producto-nombre">Pack OTD Skater Man</h4>
+                    <p class="producto-descripcion">Pack completo de ropa skater</p>
+                    <p class="producto-precio">S/.<span class="precio-valor">175</span></p>
+                    <div class="producto-acciones">
+                        <label for="cantidad-5">Cantidad:</label>
+                        <div class="cantidad-container">
+                            <button class="btn-cantidad btn-decrementar" data-target="cantidad-5">−</button>
+                            <input type="number" id="cantidad-5" class="cantidad-input" value="1" min="1" max="10" readonly>
+                            <button class="btn-cantidad btn-incrementar" data-target="cantidad-5">+</button>
+                        </div>
+                        <button class="btn-agregar-carrito" data-id="5">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 6: Accesorios -->
+            <div class="producto-card" data-categoria="accesorios" data-precio="45">
+                <div class="producto-imagen">
+                    <img src="recurs/trucos.png" alt="Accesorios">
+                </div>
+                <div class="producto-info">
+                    <h4 class="producto-nombre">Kit de herramientas</h4>
+                    <p class="producto-descripcion">Set completo de herramientas para skate</p>
+                    <p class="producto-precio">S/.<span class="precio-valor">45</span></p>
+                    <div class="producto-acciones">
+                        <label for="cantidad-6">Cantidad:</label>
+                        <div class="cantidad-container">
+                            <button class="btn-cantidad btn-decrementar" data-target="cantidad-6">−</button>
+                            <input type="number" id="cantidad-6" class="cantidad-input" value="1" min="1" max="10" readonly>
+                            <button class="btn-cantidad btn-incrementar" data-target="cantidad-6">+</button>
+                        </div>
+                        <button class="btn-agregar-carrito" data-id="6">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 7: Tabla -->
+            <div class="producto-card" data-categoria="tablas" data-precio="280">
+                <div class="producto-imagen">
+                    <img src="recurs/tablaPre.jpg" alt="Tabla premium">
+                </div>
+                <div class="producto-info">
+                    <h4 class="producto-nombre">Tabla Premium Edition</h4>
+                    <p class="producto-descripcion">Edición limitada con diseño exclusivo</p>
+                    <p class="producto-precio">S/.<span class="precio-valor">280</span></p>
+                    <div class="producto-acciones">
+                        <label for="cantidad-7">Cantidad:</label>
+                        <div class="cantidad-container">
+                            <button class="btn-cantidad btn-decrementar" data-target="cantidad-7">−</button>
+                            <input type="number" id="cantidad-7" class="cantidad-input" value="1" min="1" max="10" readonly>
+                            <button class="btn-cantidad btn-incrementar" data-target="cantidad-7">+</button>
+                        </div>
+                        <button class="btn-agregar-carrito" data-id="7">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div id="carrito-compras">
+            <h4>Carrito de Compras</h4>
+            <div id="carrito-items">
+                <p class="carrito-vacio">Carrito está vacío</p>
+            </div>
+            <div id="carrito-total">
+                <p><strong>Total: S/.<span id="total-precio">0.00</span></strong></p>
+                <button id="btn-proceder-pago" class="btn-pagar" disabled>Pagar</button>
+                <button id="btn-vaciar-carrito" class="btn-vaciar">Vaciar carrito</button>
+            </div>
+        </div>
+    </div>
+    </section>
+    </main>
+    
+    <footer>
+        <p><strong>&copy; 2025 Mundo Skateboard</strong></p>
+    </footer>
+    
+    <script src="compras.js"></script>
 </body>
 </html>
